@@ -1,39 +1,15 @@
-# MyReads Project
+# My Book Corner React Project
 
-This is the starter template for the final assessment project for Udacity's React Fundamentals course. The goal of this template is to save you time by providing a static example of the CSS and HTML markup that may be used, but without any of the React code that is needed to complete the project. If you choose to start with this template, your job will be to add interactivity to the app by refactoring the static code in this template.
+This is my 'MyReads' React books app project for the Front End Developer Nanodegree program through Udacity.  The purpose of the project was to help introduce those of us in the program to using React.  The app's basic structure and styling was given to us and we were responsible for converting it to React and adding all of its functionality.  
 
-Of course, you are free to start this project from scratch if you wish! Just be sure to use [Create React App](https://github.com/facebookincubator/create-react-app) to bootstrap the project.
+## Getting Started/Dependencies
 
-## TL;DR
+In order to view the code for this project you are going to run the following two commands in your terminal while inside the project folder.  
 
-To get started developing right away:
+* installs all project dependencies - `npm install`
+* starts the development server - `npm start`
 
-* install all project dependencies with `npm install`
-* start the development server with `npm start`
-
-## What You're Getting
-```bash
-├── CONTRIBUTING.md
-├── README.md - This file.
-├── SEARCH_TERMS.md # The whitelisted short collection of available search terms for you to use with your app.
-├── package.json # npm package manager file. It's unlikely that you'll need to modify this.
-├── public
-│   ├── favicon.ico # React Icon, You may change if you wish.
-│   └── index.html # DO NOT MODIFY
-└── src
-    ├── App.css # Styles for your app. Feel free to customize this as you desire.
-    ├── App.js # This is the root of your app. Contains static HTML right now.
-    ├── App.test.js # Used for testing. Provided with Create React App. Testing is encouraged, but not required.
-    ├── BooksAPI.js # A JavaScript API for the provided Udacity backend. Instructions for the methods are below.
-    ├── icons # Helpful images for your app. Use at your discretion.
-    │   ├── add.svg
-    │   ├── arrow-back.svg
-    │   └── arrow-drop-down.svg
-    ├── index.css # Global styles. You probably won't need to change anything here.
-    └── index.js # You should not need to modify this file. It is used for DOM rendering only.
-```
-
-Remember that good React design practice is to create new JS files for each component and use import/require statements to include them where they are needed.
+The following section of this README was given to us with the initial project instructions and I think it is useful to include with my version of the project to help others understand how the server is working and is connecting to the front end of the app.
 
 ## Backend Server
 
@@ -85,8 +61,10 @@ The backend API uses a fixed set of cached search results and is limited to a pa
 
 This project was bootstrapped with [Create React App](https://github.com/facebookincubator/create-react-app). You can find more information on how to perform common tasks [here](https://github.com/facebookincubator/create-react-app/blob/master/packages/react-scripts/template/README.md).
 
-## Contributing
+## Resources
 
-This repository is the starter code for _all_ Udacity students. Therefore, we most likely will not accept pull requests.
+I used the folllowing resources while building this project:
 
-For details, check out [CONTRIBUTING.md](CONTRIBUTING.md).
+Project Walkthrough with Maeva: https://www.youtube.com/watch?v=i6L2jLHV9j8
+React Docs: https://reactjs.org/docs/getting-started.html
+React State Webinar with Rodrick: https://drive.google.com/drive/u/0/folders/1SMvuv0-r98pVfZQA2IKToBVfXtOuD01X
