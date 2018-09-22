@@ -2,10 +2,15 @@ import React, { Component } from 'react'
 
 class Book extends Component {
     render() {
+        let bookImage = this.props.book.imageLinks ? this.props.book.imageLinks.thumbnail : ''
         return (
             <div className="book">
                 <div className="book-top">
-                    <div className="book-cover" style={{ width: 128, height: 192, backgroundImage: `url("${ this.props.book.imageLinks.thumbnail }")` }}></div>
+                    <div 
+                        className="book-cover"
+                        style={{ width: 128, height: 192, backgroundImage: `url("${ bookImage }")` 
+                        }}>
+                    </div>
                     <div className="book-shelf-changer">
                         <select 
                             onChange={ (event) => this.props.updateShelf(this.props.book, event.target.value) }
