@@ -31,10 +31,15 @@ class BooksApp extends React.Component {
             this.setState({ books })
         })
     }
+    updateState() {
+        BooksAPI.getAll().then((books) => {
+            this.setState({ books })
+        })
+    }
     updateShelf = (book, shelf) => {
-        BooksAPI.update(book, shelf);
+        BooksAPI.update(book, shelf)
 
-        this.componentDidMount();
+        this.updateState()
     }
     render() {
         return (
