@@ -3,16 +3,12 @@ import React, { Component } from 'react'
 class Book extends Component {
     render() {
         let bookImage = this.props.book.imageLinks ? this.props.book.imageLinks.thumbnail : ''
-        return (
+        return(
             <div className="book">
                 <div className="book-top">
-                    <div 
-                        className="book-cover"
-                        style={{ width: 128, height: 192, backgroundImage: `url("${ bookImage }")` 
-                        }}>
-                    </div>
+                <div className="book-cover" style={{ width: 128, height: 192, backgroundImage: `url("${ bookImage }")` }}></div>
                     <div className="book-shelf-changer">
-                        <select 
+                        <select
                             onChange={ (event) => this.props.updateShelf(this.props.book, event.target.value) }
                             value={ this.props.currentShelf }
                         >
@@ -24,8 +20,8 @@ class Book extends Component {
                         </select>
                     </div>
                 </div>
-                <div className="book-title">{ this.props.book.title }</div>
-                <div className="book-authors">{ this.props.book.authors }</div>
+                <div className="book-title">{this.props.book.title}</div>
+                <div className="book-authors">{this.props.book.authors}</div>
             </div>
         )
     }
