@@ -2,7 +2,7 @@ import React, { Component } from 'react'
 
 class Book extends Component {
     render() {
-        let bookImage = this.props.book.imageLinks ? this.props.book.imageLinks.thumbnail : ''
+        let bookImage = this.props.book.imageLinks ? this.props.book.imageLinks.thumbnail : 'http://via.placeholder.com/128x192?text=No%20Cover'
         return(
             <div className="book">
                 <div className="book-top">
@@ -21,7 +21,7 @@ class Book extends Component {
                     </div>
                 </div>
                 <div className="book-title">{this.props.book.title}</div>
-                <div className="book-authors">{this.props.book.authors}</div>
+                <div className="book-authors">{this.props.book.authors ? this.props.book.authors.join(', ') : ''}</div>
             </div>
         )
     }

@@ -7,7 +7,23 @@ import './App.css'
 
 class BooksApp extends React.Component {
     state = {
-        shelf: [
+        books: []
+    }
+    componentDidMount() {
+        BooksAPI.getAll().then((books) => {
+            this.setState({ books })
+        })
+    }
+    updateState() {
+        BooksAPI.getAll().then((books) => {
+            this.setState({ books })
+        })
+    }
+    updateShelf = (book, shelf) => {
+        BooksAPI.update(book, shelf).then(this.updateState())
+    }
+    render() {
+        const shelf = [
             {
                 name: 'Currently Reading',
                 id: 'currentlyReading',
@@ -23,30 +39,12 @@ class BooksApp extends React.Component {
                 id: 'read',
                 key: 3
             }
-        ],
-        books: []
-    }
-    componentDidMount() {
-        BooksAPI.getAll().then((books) => {
-            this.setState({ books })
-        })
-    }
-    updateState() {
-        BooksAPI.getAll().then((books) => {
-            this.setState({ books })
-        })
-    }
-    updateShelf = (book, shelf) => {
-        BooksAPI.update(book, shelf)
-
-        this.updateState()
-    }
-    render() {
+        ]
         return (
             <div className="app">
                  <Route exact path='/' render={() => (
                     <MainPage 
-                        shelf={this.state.shelf}
+                        shelf={shelf}
                         books={this.state.books}
                         updateShelf={this.updateShelf}
                     />
